@@ -1,0 +1,274 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  border: none;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+body {
+  background-color: #ebf7f3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+header {
+  background-color: #121212;
+  justify-content: space-between;
+  padding: 1.5em;
+  min-height: 10vh;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 40px;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  height: 100%;
+  align-items: center;
+  gap: 2em;
+}
+
+#search-bar form {
+  display: flex;
+}
+
+#search-bar form input {
+  width: 300px;
+  border: none;
+  outline: none;
+  background-color: #efefef;
+  text-align: center;
+  font-weight: bolder;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -1px;
+}
+
+.btn-search {
+  width: 3em;
+  aspect-ratio: 1;
+  background-image: url('./assets/img/search.png');
+  background-position: center;
+  background-size: contain;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown img {
+  width: 3em;
+  transform: scale(0.86);
+  aspect-ratio: 1;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.dropdown select {
+  border: none;
+  outline: none;
+  padding: 0.9em;
+  margin-left: -5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+main {
+  min-height: 80vh;
+}
+
+h1 {
+  padding: 0.5em;
+}
+
+.container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#left-arrow {
+  rotate: 180deg;
+  margin-left: 5px;
+}
+
+#right-arrow {
+  margin-right: 5px;
+}
+
+.btn-arrow {
+  width: 4em;
+  aspect-ratio: 1;
+  background-image: url('./assets/img/arrow.png');
+  background-color: #ebf7f3;
+  background-position: center;
+  background-size: contain;
+}
+
+.card-container {
+  padding: 1em;
+  width: 80%;
+  display: flex;
+  gap: 2em;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1em;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  scroll-snap-align: start;
+}
+
+.poster {
+  display: block;
+  width: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1rem;
+  margin-top: 1em;
+}
+
+.release-date {
+  font-size: 0.75rem;
+  margin-top: 1em;
+}
+
+.rating {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  margin-top: 1em;
+}
+
+footer {
+  border-top: 1px solid #26866a;
+  min-height: 10vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+footer > *{
+  padding: 1em;
+}
+
+.my-info > *, .credits > *{
+  display: block;
+ margin-top: 1em;
+}
+
+.my-info a{
+  text-decoration: none;
+  padding: 0.5em;
+  background-color: #26866a;
+  color: #efefef;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.my-info a:hover{
+  cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav-toggle {
+    position: absolute;
+    right: 1.5em;
+    border: none;
+    width: 2em;
+    aspect-ratio: 1;
+    z-index: 1000;
+    background: url('./assets/img/hamburger.png');
+  }
+
+  #nav-toggle[data-toggled='true'] {
+    background: url('./assets/img/cross.png');
+  }
+
+  nav {
+    position: fixed;
+    inset: 0;
+    padding: 5em;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(2em);
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 500ms ease-out;
+  }
+
+  nav[data-visible='true'] {
+    transform: translateY(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  #search-bar form input {
+    width: 200px;
+  }
+
+  .dropdown select {
+    width: 200px;
+    text-align: center;
+  }
+
+  #movie-details .title{
+    font-size: 1.2rem;
+  
+  }
+
+}

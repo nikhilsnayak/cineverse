@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/cineverse.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cineverse</title>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="icon">
+        <img src="/cineverse.png" alt="cineverse" />
+      </div>
+      <button data-toggled="false" id="nav-toggle"></button>
+      <nav data-visible="false">
+        <ul class="nav-list flex">
+          <li class="nav-item" id="search-bar">
+            <form>
+              <button type="submit" class="btn btn-search"></button>
+              <input type="text" placeholder="Enter a Movie name" />
+            </form>
+          </li>
+          <li class="nav-item dropdown" id="categories">
+            <img src="./assets/img/categories.png" alt="categories" />
+            <select name="categories">
+              <option value="now_playing" selected>Now Playing</option>
+              <option value="popular">Popular</option>
+              <option value="top_rated">Top Rated</option>
+              <option value="upcoming">Upcoming</option>
+            </select>
+          </li>
+          <li class="nav-item dropdown" id="region">
+            <img src="./assets/img/region.png" alt="region" />
+            <select name="region">
+              <option value="in" selected>India</option>
+              <option value="us">USA</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Now Playing</h1>
+      <div class="container flex">
+        <button class="btn btn-arrow" id="left-arrow"></button>
+        <div class="card-container"></div>
+        <button class="btn btn-arrow" id="right-arrow"></button>
+      </div>
+    </main>
+    <footer>
+      <div class="my-info">
+        <p>Designed and Developed by Nikhil S</p>
+        <a href="https://nikhilsnayak3473.github.io" target="_blank">Visit My Portfolio</a>
+      </div>
+      <div class="credits">
+        <p>Credits to TMDB for providing API access</p>
+        <img class="tmdb-logo" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB">
+        
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
