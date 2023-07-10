@@ -1,4 +1,4 @@
-const AUTH_TOKEN = process.env.AUTH_TOKEN
+const AUTH_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzkzYzIwYjY0YjBjZGRmNWRjYTE2MmQyYzIzMDg4NSIsInN1YiI6IjY0YWExYTYyNjZhMGQzMDBlMzczN2Y0NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3r5Y9X7SpVH27e2pAeKKU4h-WVK_mu1Zrt3MlRtGURo'
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/original'
 
