@@ -148,7 +148,6 @@ h1 {
   display: flex;
   gap: 2em;
   overflow-x: auto;
-  scroll-behavior: smooth;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1em;
 }
