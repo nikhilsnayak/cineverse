@@ -22,8 +22,8 @@ loadMovies(url, true,categorySelector.options[categorySelector.selectedIndex].te
 
 async function changeMovies(url, heading) {
     document.getElementById('nav-toggle').click();
-    await loadMovies(url, true, heading);
     document.querySelector('.card-container').scrollLeft = 0;
+    await loadMovies(url, true, heading);
 }
 
 const categoryChanger = async (e) => {
