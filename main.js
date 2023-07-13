@@ -18,12 +18,11 @@ let pageCount = 1;
 document.querySelector('h1').innerText = categorySelector.options[categorySelector.selectedIndex].text
 let url = `https://api.themoviedb.org/3/movie/${category}?language=en-US&page=${pageCount++}&region=${region}`;
 
-loadMovies(url, true)
+loadMovies(url, true,categorySelector.options[categorySelector.selectedIndex].text)
 
 async function changeMovies(url, heading) {
-    document.querySelector('h1').innerText = heading
     document.getElementById('nav-toggle').click();
-    await loadMovies(url, true);
+    await loadMovies(url, true, heading);
     document.querySelector('.card-container').scrollLeft = 0;
 }
 

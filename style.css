@@ -115,8 +115,15 @@ main {
   min-height: 80vh;
 }
 
-h1 {
-  padding: 0.5em;
+#main-heading {
+  display: inline-block;
+  margin: 1em;
+  width: fit-content;
+}
+
+#main-heading .skeleton-text{
+  width: 200px;
+  height: 1em;
 }
 
 .container {
@@ -148,6 +155,7 @@ h1 {
   display: flex;
   gap: 2em;
   overflow-x: auto;
+  scroll-behavior: smooth;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 1em;
 }
@@ -166,8 +174,10 @@ h1 {
 .poster {
   display: block;
   width: 200px;
+  aspect-ratio: 2/3;
   border-radius: 5px;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .title {
@@ -181,7 +191,6 @@ h1 {
 }
 
 .rating {
-  display: block;
   font-size: 1.25rem;
   font-weight: bolder;
   margin-top: 1em;
@@ -215,6 +224,33 @@ footer > *{
 
 .my-info a:hover{
   cursor: pointer;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+
+.skeleton-text {
+  width: 100%;
+  height: .5rem;
+  margin-bottom: .25rem;
+  border-radius: .125rem;
+}
+
+.skeleton-text:last-child {
+  margin-bottom: 0;
+  width: 80%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }
 
 

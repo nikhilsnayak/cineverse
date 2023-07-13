@@ -41,10 +41,25 @@
       </nav>
     </header>
     <main>
-      <h1>Now Playing</h1>
+      <h1 id="main-heading"></h1>
       <div class="container flex">
         <button class="btn btn-arrow" id="left-arrow"></button>
         <div class="card-container"></div>
+        <template id="card-template">
+          <div class="card">
+            <img class="poster skeleton" src="./assets/img/transparent.png" alt="" />
+            <h3 class="title">
+              <div class="skeleton skeleton-text"></div>
+              <div class="skeleton skeleton-text"></div>
+            </h3>
+            <div class="release-date">
+              <div class="skeleton skeleton-text"></div>
+            </div>
+            <div class="rating">
+              <div class="skeleton skeleton-text"></div>
+            </div>
+          </div>
+        </template>
         <button class="btn btn-arrow" id="right-arrow"></button>
       </div>
     </main>
